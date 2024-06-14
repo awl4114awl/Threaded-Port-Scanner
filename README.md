@@ -125,6 +125,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ### Contact
 
 For any inquiries or feedback, please contact [jordanryancalvert@gmail.com](mailto:jordanryancalvert@gmail.com).
-```
-
-Feel free to adjust any part of this README to better fit your preferences or project specifics.
