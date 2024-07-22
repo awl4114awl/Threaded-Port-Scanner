@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threaded Port Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Threaded Port Scanner</h1>
+        <form id="scan-form">
+            <label for="host">Host:</label>
+            <input type="text" id="host" name="host" required>
+            <label for="start_port">Start Port:</label>
+            <input type="number" id="start_port" name="start_port" required>
+            <label for="end_port">End Port:</label>
+            <input type="number" id="end_port" name="end_port" required>
+            <button type="submit">Start Scan</button>
+        </form>
+        <h2>Open Ports:</h2>
+        <ul id="results"></ul>
+    </div>
+    <script>
+        document.getElementById('scan-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const host = document.getElementById('host').value;
+            const startPort = document.getElementById('start_port').value;
+            const endPort = document.getElementById('end_port').value;
+
+            fetch('/scan', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `host=${host}&start_port=${startPort}&end_port=${endPort}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultsList = document.getElementById('results');
+                resultsList.innerHTML = '';
+                data.forEach(port => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Port ${port} is open`;
+                    resultsList.appendChild(listItem);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
