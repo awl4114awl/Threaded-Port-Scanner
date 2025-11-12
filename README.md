@@ -127,7 +127,9 @@ Example result from scanning `scanme.nmap.org` (allowed for testing):
 | scanme.nmap.org | 22   | TCP      | Open   | `SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13`       |
 | scanme.nmap.org | 80   | TCP      | Open   | *(no immediate banner — use `curl -I` to inspect)* |
 
-> Exported CSV filename example: `scanme_sample_results.csv` (`ip,port,protocol,status,banner,duration,ts`)
+<a href="https://drive.google.com/file/d/1kWxIQuSqPBKnr8P1VMlrv6rGgKVudP0w/view?usp=drive_link">
+  <img src="https://img.shields.io/badge/scanme_sample_results-0061FF?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+</a>
 
 ---
 
