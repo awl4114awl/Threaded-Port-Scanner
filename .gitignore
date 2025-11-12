@@ -1,0 +1,17 @@
+# Virtualenv
+.venv/
+venv/
+__pycache__/
+
+# Logs and exports
+*.log
+*.csv
+*.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
