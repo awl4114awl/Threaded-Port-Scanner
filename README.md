@@ -39,11 +39,12 @@ Built a multithreaded Python port scanner (Tkinter GUI) demonstrating skills in 
 
 ## 🖥️ Screenshots / Demo
 
-Include screenshots or a short GIF in your repo to make the project pop:
-
-- `screenshots/dark-mode.png` — main UI  
-- `screenshots/results-sample.png` — example results  
-- `demo/demo.gif` — short 10–15s runthrough (record with [ScreenToGif](https://www.screentogif.com/))
+<p align="left">
+  <img src="screenshots/Screenshot 2025-11-12 111055.png" width="500">
+ <img src="screenshots/Screenshot 2025-11-12 111127.png" width="500">
+ <img src="screenshots/Screenshot 2025-11-12 113034.png" width="500">
+ <img src="screenshots/Screenshot 2025-11-12 114611.png" width="500">
+</p>
 
 ---
 
