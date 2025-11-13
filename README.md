@@ -13,13 +13,6 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ---
 
-## Résumé / Quick elevator
-
-**Built-for-resume:**  
-Built a multithreaded Python port scanner (Tkinter GUI) demonstrating skills in network programming, concurrency (`ThreadPoolExecutor`), safe banner grabbing, result export, and ethical lab testing practices.
-
----
-
 ## 🚀 Features
 
 - **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
