@@ -237,7 +237,3 @@ If you want to include sample presets, add a `presets.json` (or let users create
 This project is released under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ---
-
-```
-::contentReference[oaicite:0]{index=0}
-```
