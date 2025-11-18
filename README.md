@@ -13,6 +13,13 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ---
 
+## Résumé / Quick elevator
+
+**Built-for-resume:**  
+Built a multithreaded Python port scanner (Tkinter GUI) demonstrating skills in network programming, concurrency (`ThreadPoolExecutor`), safe banner grabbing, result export, and ethical lab testing practices.
+
+---
+
 ## 🚀 Features
 
 - **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
@@ -32,12 +39,11 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ## 🖥️ Screenshots / Demo
 
-<p align="left">
-  <img src="screenshots/Screenshot 2025-11-12 111055.png" width="500">
- <img src="screenshots/Screenshot 2025-11-12 111127.png" width="500">
- <img src="screenshots/Screenshot 2025-11-12 113034.png" width="500">
- <img src="screenshots/Screenshot 2025-11-12 114611.png" width="500">
-</p>
+Include screenshots or a short GIF in your repo to make the project pop:
+
+- `screenshots/dark-mode.png` — main UI  
+- `screenshots/results-sample.png` — example results  
+- `demo/demo.gif` — short 10–15s runthrough (record with [ScreenToGif](https://www.screentogif.com/))
 
 ---
 
@@ -120,9 +126,7 @@ Example result from scanning `scanme.nmap.org` (allowed for testing):
 | scanme.nmap.org | 22   | TCP      | Open   | `SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13`       |
 | scanme.nmap.org | 80   | TCP      | Open   | *(no immediate banner — use `curl -I` to inspect)* |
 
-<a href="https://drive.google.com/file/d/1kWxIQuSqPBKnr8P1VMlrv6rGgKVudP0w/view?usp=drive_link">
-  <img src="https://img.shields.io/badge/scanme_sample_results-0061FF?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
-</a>
+> Exported CSV filename example: `scanme_sample_results.csv` (`ip,port,protocol,status,banner,duration,ts`)
 
 ---
 
@@ -237,3 +241,7 @@ If you want to include sample presets, add a `presets.json` (or let users create
 This project is released under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ---
+
+```
+::contentReference[oaicite:0]{index=0}
+```

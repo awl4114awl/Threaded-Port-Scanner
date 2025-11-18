@@ -598,6 +598,23 @@ class ScannerApp:
 # ---------- Run ----------
 def main():
     root = tk.Tk()
+
+    # ✅ Add window & taskbar icon
+    icon_path = os.path.join("screenshots", "icon.ico")
+    if os.path.exists(icon_path):
+        try:
+            # Sets the title bar icon
+            root.iconbitmap(icon_path)
+
+            # --- Taskbar fix (Windows only) ---
+            if sys.platform.startswith("win"):
+                import ctypes
+                hwnd = ctypes.windll.user32.GetParent(root.winfo_id())
+                ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("ThreadedPortScanner")
+                ctypes.windll.user32.SendMessageW(hwnd, 0x80, 0, 0)
+        except Exception as e:
+            print(f"Could not set icon: {e}")
+
     app = ScannerApp(root)
     root.mainloop()
 
