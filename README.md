@@ -35,15 +35,24 @@ Built a multithreaded Python port scanner (Tkinter GUI) demonstrating skills in 
 - **Fixed window size** for consistent demos
 - **Standard-library only** — no external dependencies (Python 3.8+ / 3.14 tested)
 
+
 ---
 
-## 🖥️ Screenshots / Demo
+## 🖼 GUI Preview
 
-Include screenshots or a short GIF in your repo to make the project pop:
+<p align="left">
+  <img src="screenshots/Screenshot 2025-11-18 141219.png" width="650">
+  <img src="screenshots/Screenshot 2025-11-18 141552.png" width="650">
+</p>
 
-- `screenshots/dark-mode.png` — main UI  
-- `screenshots/results-sample.png` — example results  
-- `demo/demo.gif` — short 10–15s runthrough (record with [ScreenToGif](https://www.screentogif.com/))
+---
+
+## 🧩 App Icon
+
+<p align="left">
+  <img src="screenshots/icon.ico" width="50">
+  <img src="screenshots/icon.png" width="200">
+</p>
 
 ---
 
