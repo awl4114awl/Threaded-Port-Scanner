@@ -13,13 +13,6 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ---
 
-## Résumé / Quick elevator
-
-**Built-for-resume:**  
-Built a multithreaded Python port scanner (Tkinter GUI) demonstrating skills in network programming, concurrency (`ThreadPoolExecutor`), safe banner grabbing, result export, and ethical lab testing practices.
-
----
-
 ## 🚀 Features
 
 - **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
@@ -164,40 +157,6 @@ Set-ExecutionPolicy RemoteSigned -Scope Process -Force
 
 ---
 
-## 🧱 Future Enhancements
-
-* CLI mode (`--target`, `--ports`, `--output`)
-* Preset manager dialog (edit user presets)
-* CVE / service enrichment (read-only metadata lookup)
-* Scheduled scans & reporting (local only)
-* Packaging to standalone EXE (PyInstaller)
-* Optional migration to `customtkinter` for modern widgets and native dark title bar
-
----
-
-## 🤝 Contributing
-
-Thanks! If you want to contribute:
-
-1. Fork the repo and create a feature branch.
-2. Keep changes small and focused.
-3. Add or update screenshots for UI changes.
-4. Open a Pull Request with a short description of the change.
-
-Please avoid adding secrets, large binary files, or user-specific files (e.g., `.venv`, logs).
-
----
-
-## Responsible Use & Ethics
-
-This project is for education and authorized lab testing only.
-
-* Only scan systems you own or have **written authorization** to test.
-* Do **not** perform exploitation, brute force, credential stuffing, or DDoS using this tool.
-* When testing public targets (e.g., `scanme.nmap.org`), follow their rules and avoid heavy or repeated scans that could be disruptive.
-
----
-
 ## .gitignore (suggested)
 
 Add a `.gitignore` file to the repo root to avoid committing artifacts:
@@ -249,7 +208,3 @@ If you want to include sample presets, add a `presets.json` (or let users create
 This project is released under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ---
-
-```
-::contentReference[oaicite:0]{index=0}
-```
