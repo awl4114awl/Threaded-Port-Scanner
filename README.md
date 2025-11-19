@@ -4,30 +4,16 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge)
 
+---
+
+## 🧠 Overview
+
 A lightweight, educational **multithreaded port scanner** with a dark-mode Tkinter GUI.  
 Designed for laboratory and learning use to demonstrate network enumeration basics (TCP/UDP scanning, banner grabbing, concurrent scanning) in a safe and ethical way.
 
 > ⚠️ **Ethical Use Notice**
 > ---
 > This tool is intended **only** for authorized testing — your own devices, lab VMs, or explicitly permitted hosts such as `scanme.nmap.org`. Do **not** scan any system without permission.
-
----
-
-## 🚀 Features
-
-- **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
-- **TCP / UDP support**
-- **Flexible target input:** single IPs, IP ranges, CIDR notation, hostnames
-- **Flexible ports:** comma-separated lists or ranges (`22,80,443,8000-8100`)
-- **Optional TCP banner grabbing** (best-effort, non-intrusive)
-- **Dark-mode Tkinter GUI** with presets
-- **Export results** to CSV or JSON
-- **Detailed logging** via `port_scanner.log`
-- **Error handling & safe threading**
-- **Presets** (built-in + persistent user presets)
-- **Fixed window size** for consistent demos
-- **Standard-library only** — no external dependencies (Python 3.8+ / 3.14 tested)
-
 
 ---
 
@@ -45,6 +31,23 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
   <img src="screenshots/icon.ico" width="50">
   <img src="screenshots/icon.png" width="200">
 </p>
+
+---
+
+## 🚀 Features
+
+- **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
+- **TCP / UDP support**
+- **Flexible target input:** single IPs, IP ranges, CIDR notation, hostnames
+- **Flexible ports:** comma-separated lists or ranges (`22,80,443,8000-8100`)
+- **Optional TCP banner grabbing** (best-effort, non-intrusive)
+- **Dark-mode Tkinter GUI** with presets
+- **Export results** to CSV or JSON
+- **Detailed logging** via `port_scanner.log`
+- **Error handling & safe threading**
+- **Presets** (built-in + persistent user presets)
+- **Fixed window size** for consistent demos
+- **Standard-library only** — no external dependencies (Python 3.8+ / 3.14 tested)
 
 ---
 
