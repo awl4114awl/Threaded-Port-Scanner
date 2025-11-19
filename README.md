@@ -7,7 +7,8 @@
 A lightweight, educational **multithreaded port scanner** with a dark-mode Tkinter GUI.  
 Designed for laboratory and learning use to demonstrate network enumeration basics (TCP/UDP scanning, banner grabbing, concurrent scanning) in a safe and ethical way.
 
-> ⚠️ **Ethical Use Notice**  
+> ⚠️ **Ethical Use Notice**
+> ---
 > This tool is intended **only** for authorized testing — your own devices, lab VMs, or explicitly permitted hosts such as `scanme.nmap.org`. Do **not** scan any system without permission.
 
 ---
