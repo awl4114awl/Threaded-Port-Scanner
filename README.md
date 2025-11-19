@@ -6,7 +6,7 @@
 
 ---
 
-## 🧠 Overview
+## 🪟 Overview
 
 A lightweight, educational **multithreaded port scanner** with a dark-mode Tkinter GUI.  
 Designed for laboratory and learning use to demonstrate network enumeration basics (TCP/UDP scanning, banner grabbing, concurrent scanning) in a safe and ethical way.
