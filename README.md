@@ -8,12 +8,11 @@
 
 ## 🪟 Overview
 
-A lightweight, educational **multithreaded port scanner** with a dark-mode Tkinter GUI.  
-Designed for laboratory and learning use to demonstrate network enumeration basics (TCP/UDP scanning, banner grabbing, concurrent scanning) in a safe and ethical way.
+The **Threaded Port Scanner** is a modern, dark-themed Windows desktop application built in **Python 3.14** using the standard **Tkinter** framework.
+It provides an intuitive interface for performing **TCP / UDP network scans**, **banner grabbing**, and **multi-threaded enumeration** — all within a clean, responsive GUI. This project is part of my **cybersecurity & Python development portfolio**, showcasing practical knowledge of **network programming**, **concurrency**, and **secure software design principles**.
 
-> ⚠️ **Ethical Use Notice**
-> ---
-> This tool is intended **only** for authorized testing — your own devices, lab VMs, or explicitly permitted hosts such as `scanme.nmap.org`. Do **not** scan any system without permission.
+> ⚠️ This tool is intended **only** for authorized testing — your own devices, lab environments, or explicitly permitted hosts such as `scanme.nmap.org`.
+> Do **not** scan any system without consent.
 
 ---
 
@@ -25,7 +24,7 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ---
 
-## 🧩 App Icon
+## 🖥️ App Icon
 
 <p align="left">
   <img src="screenshots/icon.ico" width="50">
@@ -34,7 +33,7 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ---
 
-## 🚀 Features
+## ☰ Features
 
 - **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
 - **TCP / UDP support**
@@ -70,19 +69,19 @@ Threaded-Port-Scanner/
 
 ---
 
-## ⚙️ Installation
+## ⬇️ Installation
 
-### Prerequisites
+**Prerequisites**
 - Python 3.8 – 3.14  
 - `tkinter` (usually included with Python on Windows)
 
-### Clone the Repository
+**Clone the Repository**
 ```bash
 git clone https://github.com/awl4114awl/Threaded-Port-Scanner.git
 cd Threaded-Port-Scanner
 ````
 
-### Optional: Create a Virtual Environment (recommended)
+**Optional: Create a Virtual Environment (this is recommended)**
 
 ```bash
 python -m venv .venv
@@ -92,41 +91,53 @@ python -m venv .venv
 .venv\Scripts\activate.bat
 ```
 
-### Run the Application
+## ▶️ Running the Application
 
 ```bash
 python port_scanner.py
 ```
 
----
-
-## 🧭 Usage
-
-### GUI Fields
-
-| Field                                   | Description                                            |
-| --------------------------------------- | ------------------------------------------------------ |
-| **Target IP / Range / CIDR**            | Example: `127.0.0.1`, `192.168.1.10-20`, `10.0.0.0/28` |
-| **Ports**                               | Example: `22,80,443,8000-8100`                         |
-| **Protocol**                            | TCP (default) or UDP                                   |
-| **Timeout (s)**                         | Connection timeout per probe                           |
-| **Threads**                             | Number of concurrent workers (e.g. 25)                 |
-| **Banner Grab**                         | Optional TCP banner read                               |
-| **Presets**                             | Quick-select common targets/port-sets, save/delete     |
-| **Start / Stop / Save Results / Clear** | Main controls                                          |
-
-### Example Safe Scan
-
-1. Target: `scanme.nmap.org`
-2. Ports: `22,80,443,8080`
-3. Protocol: `TCP`
-4. Timeout: `1`
-5. Threads: `10`
-6. Click **Start Scan**
+_Hopefully, the GUI will launch._
 
 ---
 
-## 📊 Output
+## ❓ How the Scanner Works
+
+The **Threaded Port Scanner** performs fast, concurrent port checks using Python’s built-in `socket` and `concurrent.futures` modules. There are no external dependencies required.
+
+1. **Input Parsing**
+
+   * Accepts single IPs, IP ranges (`192.168.1.10–20`), or CIDR blocks (`10.0.0.0/28`).
+   * Expands ports entered as comma-separated lists or ranges (`22,80,443,8000-8100`).
+
+2. **Threaded Execution**
+
+   * Uses a `ThreadPoolExecutor` to probe multiple ports and hosts in parallel.
+   * Each worker runs a lightweight TCP or UDP check with timeout control.
+
+3. **Port Probing**
+
+   * **TCP:** Attempts to connect and, if enabled, performs simple **banner grabbing** to identify services.
+   * **UDP:** Sends empty datagrams and listens for responses or timeouts (open/filtered detection).
+
+4. **Result Collection**
+
+   * Each thread pushes results to a thread-safe queue.
+   * The GUI polls the queue to update the live table in real-time (non-blocking).
+
+5. **Data Logging & Export**
+
+   * Results include IP, port, protocol, status, banner, duration, and timestamp.
+   * Scans can be exported to CSV or JSON for further analysis.
+
+6. **User Experience**
+
+   * Fully asynchronous UI — stays responsive even with hundreds of concurrent probes.
+   * Supports dark mode, fixed window size, and custom presets for common scan configurations.
+
+---
+
+## 📤 Output Overview — What You Can Expect to See
 
 * **CSV / JSON export** includes: `ip, port, protocol, status, banner, duration, ts`
 * **Log file:** `port_scanner.log` — contains runtime info and errors
@@ -137,10 +148,6 @@ python port_scanner.py
   * `Closed/Filtered` — timed-out or filtered (likely firewall)
   * `Open|Filtered` — UDP probe with no reply (ambiguous)
   * `Error` — network / permission issue
-
----
-
-## 🔍 Sample scan (safe demo)
 
 Example result from scanning `scanme.nmap.org` (allowed for testing):
 
@@ -153,79 +160,7 @@ Example result from scanning `scanme.nmap.org` (allowed for testing):
 
 ---
 
-## 🔧 PyCharm Quick Setup
-
-1. Open the project in PyCharm.
-2. Configure interpreter: use `.venv\Scripts\python.exe` or system Python 3.14.
-3. Right-click `port_scanner.py` → **Run** (or create a Run configuration).
-4. If venv activation blocked in PowerShell:
-
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope Process -Force
-.venv\Scripts\Activate.ps1
-```
-
----
-
-## 🧠 Technical Overview
-
-* **Target parsing:** expands CIDR / ranges and hostnames into individual targets
-* **Port parsing:** handles mixed comma + range syntax and validates 1–65535
-* **Scanning engine:** `socket` with per-connection timeout; TCP connect + optional banner; best-effort UDP probe
-* **Threading:** ThreadPoolExecutor manages worker threads; results queued to main thread via `queue.Queue` and `tkinter.after()` for thread-safe UI updates
-* **Presets:** built-in safe presets + user-saved presets persisted to `presets.json` (user presets can be added/deleted)
-* **GUI:** styled dark-mode `ttk` theme, fixed window size for consistent demos
-* **Logging & export:** `port_scanner.log` and CSV/JSON exports for audit and reporting
-
----
-
-## .gitignore (suggested)
-
-Add a `.gitignore` file to the repo root to avoid committing artifacts:
-
-```
-# Virtualenv
-.venv/
-venv/
-__pycache__/
-
-# Logs and exports
-*.log
-*.csv
-*.json
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-```
-
----
-
-## presets.json (optional example)
-
-If you want to include sample presets, add a `presets.json` (or let users create it at runtime):
-
-```json
-{
-  "My-Local-VulnHub": {
-    "target": "192.168.56.101",
-    "ports": "22,80,443,445,8080",
-    "protocol": "TCP",
-    "threads": "20",
-    "timeout": "1"
-  }
-}
-```
-
-*(Add `presets.json` to `.gitignore` if you prefer not to include user presets in the repo.)*
-
----
-
-## License
+## 🪪 License
 
 This project is released under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
