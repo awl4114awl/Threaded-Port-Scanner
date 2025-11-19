@@ -42,7 +42,6 @@ Built a multithreaded Python port scanner (Tkinter GUI) demonstrating skills in 
 
 <p align="left">
   <img src="screenshots/Screenshot 2025-11-18 141219.png" width="650">
-  <img src="screenshots/Screenshot 2025-11-18 141552.png" width="650">
 </p>
 
 ---
