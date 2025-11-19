@@ -51,6 +51,25 @@ Designed for laboratory and learning use to demonstrate network enumeration basi
 
 ---
 
+## 📁 Project Structure
+
+```
+Threaded-Port-Scanner/
+│
+├── screenshots/
+│   ├── Screenshot 2025-11-18 141219.png     # Main UI screenshot
+│   ├── Screenshot 2025-11-18 141552.png     # Scan results example
+│   ├── icon.ico                             # Application window/taskbar icon
+│   └── icon.png                             # README / branding icon
+│
+├── .gitignore                               # Excludes venvs, logs, and IDE files
+├── LICENSE                                  # MIT license
+├── README.md                                # Documentation and usage guide
+└── port_scanner.py                          # Main threaded port scanner script
+```
+
+---
+
 ## ⚙️ Installation
 
 ### Prerequisites
