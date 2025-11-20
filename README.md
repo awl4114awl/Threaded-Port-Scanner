@@ -35,18 +35,18 @@ It provides an intuitive interface for performing **TCP / UDP network scans**, *
 
 ## ☰ Features
 
-- **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
-- **TCP / UDP support**
-- **Flexible target input:** single IPs, IP ranges, CIDR notation, hostnames
-- **Flexible ports:** comma-separated lists or ranges (`22,80,443,8000-8100`)
-- **Optional TCP banner grabbing** (best-effort, non-intrusive)
-- **Dark-mode Tkinter GUI** with presets
-- **Export results** to CSV or JSON
-- **Detailed logging** via `port_scanner.log`
-- **Error handling & safe threading**
-- **Presets** (built-in + persistent user presets)
-- **Fixed window size** for consistent demos
-- **Standard-library only** — no external dependencies (Python 3.8+ / 3.14 tested)
+* **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
+* **TCP / UDP support**
+* **Flexible target input:** single IPs, IP ranges, CIDR notation, hostnames
+* **Flexible ports:** comma-separated lists or ranges (`22,80,443,8000-8100`)
+* **Optional TCP banner grabbing** (best-effort, non-intrusive)
+* **Dark-mode Tkinter GUI** with presets
+* **Export results** to CSV or JSON
+* **Detailed logging** via `port_scanner.log`
+* **Error handling & safe threading**
+* **Presets** (built-in + persistent user presets)
+* **Fixed window size** for consistent demos
+* **Standard-library only** — no external dependencies (Python 3.8+ / 3.14 tested)
 
 ---
 
