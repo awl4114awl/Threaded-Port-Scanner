@@ -8,8 +8,8 @@
 
 ## 🪟 Overview
 
-The **Threaded Port Scanner** is a modern, dark-themed Windows desktop application built in **Python 3.14** using the standard **Tkinter** framework.
-It provides an intuitive interface for performing **TCP / UDP network scans**, **banner grabbing**, and **multi-threaded enumeration** — all within a clean, responsive GUI. This project is part of my **cybersecurity & Python development portfolio**, showcasing practical knowledge of **network programming**, **concurrency**, and **secure software design principles**.
+The Threaded Port Scanner is a modern, dark-themed Windows desktop application built in Python 3.14 using the standard Tkinter framework.
+It provides an intuitive interface for performing TCP / UDP network scans, banner grabbing, and multi-threaded enumeration — all within a clean, responsive GUI. This project is part of my cybersecurity & Python development portfolio, showcasing practical knowledge of network programming, concurrency, and secure software design principles.
 
 > ⚠️ This tool is intended **only** for authorized testing — your own devices, lab environments, or explicitly permitted hosts such as `scanme.nmap.org`.
 > Do **not** scan any system without consent.
