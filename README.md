@@ -1,4 +1,4 @@
-# 💻 Threaded Port Scanner
+# ⌨️ Threaded Port Scanner
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge&logo=python)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
