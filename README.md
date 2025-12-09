@@ -15,7 +15,7 @@ The Threaded Port Scanner is a modern, dark-themed Windows desktop application b
 ## 🖼 GUI Preview
 
 <p align="left">
-  <img src="screenshots/Screenshot 2025-11-18 141219.png" width="800">
+  <img src="screenshots/Screenshot 2025-11-18 141219.png" width="900">
 </p>
 
 ---
