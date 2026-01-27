@@ -1,18 +1,14 @@
-# ⌨️ Threaded Port Scanner
+# Threaded Port Scanner
 
-![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge\&logo=python\&logoColor=white)
-
----
-
-## 🪟 Overview
+## ⓘ Overview
 
 The Threaded Port Scanner is a modern, dark-themed Windows desktop application built in Python 3.14 using the standard Tkinter framework. It provides an intuitive interface for performing TCP / UDP network scans, banner grabbing, and multi-threaded enumeration. This project is part of my cybersecurity & Python development portfolio, showcasing practical knowledge of network programming, concurrency, and secure software design principles.
 
-> ⚠️ This tool is intended **only** for authorized testing on your own devices, lab environments, or explicitly permitted hosts such as `scanme.nmap.org`. Please do not scan any system without consent.
+> ⚠️ This tool is intended only for authorized testing on your own devices, lab environments, or explicitly permitted hosts such as `scanme.nmap.org`. Please do not scan any system without consent.
 
 ---
 
-## 🖼 GUI Preview
+## GUI Preview
 
 <p align="left">
   <img src="screenshots/Screenshot 2025-11-18 141219.png" width="900">
@@ -20,7 +16,7 @@ The Threaded Port Scanner is a modern, dark-themed Windows desktop application b
 
 ---
 
-## 🖥️ App Icon
+## App Icon
 
 <p align="left">
   <img src="screenshots/icon.ico" width="50">
@@ -29,24 +25,24 @@ The Threaded Port Scanner is a modern, dark-themed Windows desktop application b
 
 ---
 
-## ☰ Features
+## Features
 
-* **Multithreaded scanning** using `concurrent.futures.ThreadPoolExecutor`
-* **TCP / UDP support**
-* **Flexible target input:** single IPs, IP ranges, CIDR notation, hostnames
-* **Flexible ports:** comma-separated lists or ranges (`22,80,443,8000-8100`)
-* **Optional TCP banner grabbing** (best-effort, non-intrusive)
-* **Dark-mode Tkinter GUI** with presets
-* **Export results** to CSV or JSON
-* **Detailed logging** via `port_scanner.log`
-* **Error handling & safe threading**
-* **Presets** (built-in + persistent user presets)
-* **Fixed window size** for consistent demos
-* **Standard-library only** — no external dependencies (Python 3.8+ / 3.14 tested)
+* Multithreaded scanning using `concurrent.futures.ThreadPoolExecutor`
+* TCP / UDP support
+* Flexible target input: single IPs, IP ranges, CIDR notation, hostnames
+* Flexible ports: comma-separated lists or ranges (`22,80,443,8000-8100`)
+* Optional TCP banner grabbing (best-effort, non-intrusive)
+* Dark-mode Tkinter GUI with presets
+* Export results to CSV or JSON
+* Detailed logging via `port_scanner.log`
+* Error handling & safe threading
+* Presets (built-in + persistent user presets)
+* Fixed window size for consistent demos
+* Standard-library only — no external dependencies (Python 3.8+ / 3.14 tested)
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Threaded-Port-Scanner/
@@ -65,19 +61,19 @@ Threaded-Port-Scanner/
 
 ---
 
-## ⬇️ Installation
+## Installation
 
-**Prerequisites**
+Prerequisites
 - Python 3.8 – 3.14  
 - `tkinter` (usually included with Python on Windows)
 
-**Clone the Repository**
+Clone the Repository
 ```bash
 git clone https://github.com/awl4114awl/Threaded-Port-Scanner.git
 cd Threaded-Port-Scanner
 ````
 
-**Optional: Create a Virtual Environment (this is recommended)**
+Optional: Create a Virtual Environment (this is recommended)
 
 ```bash
 python -m venv .venv
@@ -87,7 +83,7 @@ python -m venv .venv
 .venv\Scripts\activate.bat
 ```
 
-## ▶️ Running the Application
+## Running the Application
 
 ```bash
 python port_scanner.py
@@ -97,47 +93,47 @@ _Hopefully, the GUI will launch._
 
 ---
 
-## ❓ How the Scanner Works
+## How the Scanner Works
 
-The **Threaded Port Scanner** performs fast, concurrent port checks using Python’s built-in `socket` and `concurrent.futures` modules. There are no external dependencies required.
+The Threaded Port Scanner performs fast, concurrent port checks using Python’s built-in `socket` and `concurrent.futures` modules. There are no external dependencies required.
 
-1. **Input Parsing**
+1. Input Parsing
 
    * Accepts single IPs, IP ranges (`192.168.1.10–20`), or CIDR blocks (`10.0.0.0/28`).
    * Expands ports entered as comma-separated lists or ranges (`22,80,443,8000-8100`).
 
-2. **Threaded Execution**
+2. Threaded Execution
 
    * Uses a `ThreadPoolExecutor` to probe multiple ports and hosts in parallel.
    * Each worker runs a lightweight TCP or UDP check with timeout control.
 
-3. **Port Probing**
+3. Port Probing
 
-   * **TCP:** Attempts to connect and, if enabled, performs simple **banner grabbing** to identify services.
-   * **UDP:** Sends empty datagrams and listens for responses or timeouts (open/filtered detection).
+   * TCP: Attempts to connect and, if enabled, performs simple banner grabbing to identify services.
+   * UDP: Sends empty datagrams and listens for responses or timeouts (open/filtered detection).
 
-4. **Result Collection**
+4. Result Collection
 
    * Each thread pushes results to a thread-safe queue.
    * The GUI polls the queue to update the live table in real-time (non-blocking).
 
-5. **Data Logging & Export**
+5. Data Logging & Export
 
    * Results include IP, port, protocol, status, banner, duration, and timestamp.
    * Scans can be exported to CSV or JSON for further analysis.
 
-6. **User Experience**
+6. User Experience
 
    * Fully asynchronous UI — stays responsive even with hundreds of concurrent probes.
    * Supports dark mode, fixed window size, and custom presets for common scan configurations.
 
 ---
 
-## 📤 Output Overview — What You Can Expect to See
+## Output Overview — What You Can Expect to See
 
-* **CSV / JSON export** includes: `ip, port, protocol, status, banner, duration, ts`
-* **Log file:** `port_scanner.log` — contains runtime info and errors
-* **Statuses explained:**
+* CSV / JSON export includes: `ip, port, protocol, status, banner, duration, ts`
+* Log file: `port_scanner.log` — contains runtime info and errors
+* Statuses explained:
 
   * `Open` — connection succeeded
   * `Closed` — connection refused
@@ -156,8 +152,8 @@ Example result from scanning `scanme.nmap.org` (allowed for testing):
 
 ---
 
-## 🪪 License
+## License
 
-This project is released under the **MIT License**. See [`LICENSE`](LICENSE) for details.
+This project is released under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ---
