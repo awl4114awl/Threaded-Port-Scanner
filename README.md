@@ -6,15 +6,11 @@ The Threaded Port Scanner is a modern, dark-themed Windows desktop application b
 
 > ⚠️ This tool is intended only for authorized testing on your own devices, lab environments, or explicitly permitted hosts such as `scanme.nmap.org`. Please do not scan any system without consent.
 
----
-
 ## GUI Preview
 
 <p align="left">
-  <img src="screenshots/Screenshot 2025-11-18 141219.png" width="900">
+  <img src="screenshots/Screenshot 2025-11-18 141219.png" width="750">
 </p>
-
----
 
 ## App Icon
 
@@ -22,8 +18,6 @@ The Threaded Port Scanner is a modern, dark-themed Windows desktop application b
   <img src="screenshots/icon.ico" width="50">
   <img src="screenshots/icon.png" width="200">
 </p>
-
----
 
 ## Features
 
@@ -39,8 +33,6 @@ The Threaded Port Scanner is a modern, dark-themed Windows desktop application b
 * Presets (built-in + persistent user presets)
 * Fixed window size for consistent demos
 * Standard-library only — no external dependencies (Python 3.8+ / 3.14 tested)
-
----
 
 ## Project Structure
 
@@ -58,8 +50,6 @@ Threaded-Port-Scanner/
 ├── README.md                                # Documentation and usage guide
 └── port_scanner.py                          # Main threaded port scanner script
 ```
-
----
 
 ## Installation
 
@@ -90,8 +80,6 @@ python port_scanner.py
 ```
 
 _Hopefully, the GUI will launch._
-
----
 
 ## How the Scanner Works
 
@@ -127,8 +115,6 @@ The Threaded Port Scanner performs fast, concurrent port checks using Python’s
    * Fully asynchronous UI — stays responsive even with hundreds of concurrent probes.
    * Supports dark mode, fixed window size, and custom presets for common scan configurations.
 
----
-
 ## Output Overview — What You Can Expect to See
 
 * CSV / JSON export includes: `ip, port, protocol, status, banner, duration, ts`
@@ -150,10 +136,6 @@ Example result from scanning `scanme.nmap.org` (allowed for testing):
 
 > Exported CSV filename example: `scanme_sample_results.csv` (`ip,port,protocol,status,banner,duration,ts`)
 
----
-
 ## License
 
 This project is released under the MIT License. See [`LICENSE`](LICENSE) for details.
-
----
